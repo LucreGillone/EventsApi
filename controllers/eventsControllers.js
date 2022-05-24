@@ -7,7 +7,7 @@ const eventsControllers = {
     getAllEvents: async (req, res) => {
         try {
             const events = await Event.find()
-            res.json({success: true, response: {currentDate: "2022-01-01", events: events }})
+            res.json({currentDate: "2022-01-01", events: events})
         } catch (error) {
             res.json({success: false, response: error.message})
         }
