@@ -17,6 +17,7 @@ const eventsControllers = {
         if (req.user && req.user.username === 'administrador' &&  req.user.password === 'MindHub2022') {   
             const newEvent = new Event({
                 image: req.body.image, 
+                name: req.body.name,
                 date: req.body.date,
                 description: req.body.description,
                 category: req.body.category,
